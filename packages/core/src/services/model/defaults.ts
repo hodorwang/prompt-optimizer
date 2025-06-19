@@ -39,6 +39,7 @@ const GEMINI_API_KEY = getEnvVar('VITE_GEMINI_API_KEY').trim();
 const DEEPSEEK_API_KEY = getEnvVar('VITE_DEEPSEEK_API_KEY').trim();
 const SILICONFLOW_API_KEY = getEnvVar('VITE_SILICONFLOW_API_KEY').trim();
 const ZHIPU_API_KEY = getEnvVar('VITE_ZHIPU_API_KEY').trim();
+const OPENROUTER_API_KEY = getEnvVar('VITE_OPENROUTER_API_KEY').trim();
 const CUSTOM_API_KEY = getEnvVar('VITE_CUSTOM_API_KEY').trim();
 const CUSTOM_API_BASE_URL = getEnvVar('VITE_CUSTOM_API_BASE_URL');
 const CUSTOM_API_MODEL = getEnvVar('VITE_CUSTOM_API_MODEL');
@@ -96,6 +97,17 @@ export const defaultModels: Record<string, ModelConfig> = {
     apiKey: ZHIPU_API_KEY,
     enabled: !!ZHIPU_API_KEY,
     provider: 'zhipu',
+    llmParams: {
+    }
+  },
+  openrouter: {
+    name: 'OpenRouter',
+    baseURL: 'https://openrouter.ai/api/v1',
+    models: ['anthropic/claude-sonnet-4', 'openai/gpt-4o-mini', 'google/gemini-2.5-pro', 'google/gemini-2.5-flash', 'google/gemini-2.5-flash-lite-preview-06-17'],
+    defaultModel: 'anthropic/claude-3.5-sonnet',
+    apiKey: OPENROUTER_API_KEY,
+    enabled: !!OPENROUTER_API_KEY,
+    provider: 'openrouter',
     llmParams: {
     }
   },

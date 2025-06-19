@@ -5,11 +5,12 @@
 - 主要版本：v1.0.6
 - 当前阶段：功能完善与用户体验优化
 - 最新特性：高级LLM参数配置、数据导入导出、密码保护
+- **最新更新 (2025-01-22)**: 新增 OpenRouter 模型支持
 
 ## 🚀 主要功能特性
 
 ### ✅ 核心功能 (已完成)
-- **多模型支持**: OpenAI、Gemini、DeepSeek、Zhipu、SiliconFlow
+- **多模型支持**: OpenAI、Gemini、DeepSeek、Zhipu、SiliconFlow、**OpenRouter**
 - **高级参数配置**: 支持每个模型的LLM参数自定义 (temperature, max_tokens等)
 - **提示词优化**: 一键优化、多轮迭代、对比测试
 - **历史记录管理**: 本地存储、搜索过滤、导入导出
